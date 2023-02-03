@@ -18,8 +18,8 @@ metro:
   dump: none
   dump-treshold: 4096
   status-page: true
+  web-context: metro
 # not fully supported yet:
-#  web-context: metro
 #  wsdl-root: WEB-INF/wsdl
 ```
 
