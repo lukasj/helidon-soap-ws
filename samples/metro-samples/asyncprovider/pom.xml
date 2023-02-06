@@ -48,7 +48,7 @@
                         <configuration>
                             <packageName>asyncprovider.server</packageName>
                             <wsdlFiles>
-                                <wsdlFile>${project.basedir}/src/main/resources/WEB-INF/wsdl/Hello_literal.wsdl</wsdlFile>
+                                <wsdlFile>${project.basedir}/src/main/resources/WEB-INF/wsdl/hello_literal.wsdl</wsdlFile>
                             </wsdlFiles>
                         </configuration>
                     </execution>
@@ -62,7 +62,7 @@
                             <packageName>asyncprovider.client</packageName>
                             <staleFile>${project.build.directory}/jaxws/stale-test</staleFile>
                             <wsdlFiles>
-                                <wsdlFile>${project.basedir}/src/main/resources/WEB-INF/wsdl/Hello_literal.wsdl</wsdlFile>
+                                <wsdlFile>${project.basedir}/src/main/resources/WEB-INF/wsdl/hello_literal.wsdl</wsdlFile>
                             </wsdlFiles>
                             <wsdlLocation>http://localhost:8080/metro/hello?wsdl</wsdlLocation>
                         </configuration>
