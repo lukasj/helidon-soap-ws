@@ -32,9 +32,8 @@ import org.eclipse.microprofile.config.ConfigProvider;
 public class MetroCdiExtension implements Extension {
 
     public void start(@Observes @Priority(Interceptor.Priority.PLATFORM_AFTER) @Initialized(ApplicationScoped.class) Object event, BeanManager bm) {
-        org.eclipse.microprofile.config.Config config = ConfigProvider.getConfig();
-        Config helidonConfig = MpConfig.toHelidonConfig(config).get("metro");
-        MetroSupport metro = MetroSupport.create(helidonConfig);
+        Config helidonConfig = MpConfig.toHelidonConfig(ConfigProvider.getConfig());
+        MetroSupport metro = MetroSupport.create(helidonConfig.get("metro"));
         RoutingBuilders.create(helidonConfig)
                 .routingBuilder()
                 .register(metro);
